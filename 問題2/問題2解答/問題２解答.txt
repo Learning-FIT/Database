@@ -51,11 +51,11 @@ SELECT * FROM tbl_kouza WHERE kouza_no LIKE '2______' OR kouza_name LIKE'エ__%�
 -- 【23】 tbl_kouzaテーブルの主キーは「kouza_no」、tbl_torihikiテーブルの主キーは「torihiki_no」、tbl_torihiki事
 -- 由テーブルの主キーは「tbl_jiyu ID」
 -- 【24】 
-SELECT kouza_no,kouza_name,kouza_type,kouza_amount,update_date FROM 4 ORDER BY 1;
+SELECT kouza_no,kouza_name,kouza_type,kouza_amount,update_date FROM tbl_kouza ORDER BY kouza_no;
 -- 【25】 
 SELECT DISTINCT kouza_name FROM tbl_kouza ORDER BY kouza_name;
 -- 【26】 
-SELECT kouza_no,kouza_name,kouza_type,kouza_amount,update_date FROM tbl_kouza ORDER BY kouza_amount DESC,kouza_no;
+SELECT kouza_no,kouza_name,kouza_type,kouza_amount,update_date FROM tbl_kouza ORDER BY 4 DESC,1;
 -- 【27】 
 SELECT kouza_no FROM tbl_kouza UNION SELECT kouza_no FROM tbl_haishi ORDER BY kouza_no; 
 -- 【28】 
